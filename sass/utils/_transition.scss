@@ -1,5 +1,6 @@
 @mixin transition($properties...) {
-    @if length($properties) == 1 {
+    @debug length($properties);
+    @if length($properties) <= 1 {
         transition: $properties $trans-dur $trans-func;
     } @else {
         transition-property: $properties;
