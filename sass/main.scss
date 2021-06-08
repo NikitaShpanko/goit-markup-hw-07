@@ -330,15 +330,10 @@ body {
   fill: $svg-link-color;
 
   @include transition(background-color, fill);
-  // transition-property: background-color, fill;
-  // transition-duration: $trans-dur;
-  // transition-timing-function: $trans-func;
-}
-
-.social-link:hover,
-.social-link:focus {
-  background-color: $highlight-color;
-  fill: $background-light;
+  &:hover, &:focus {
+    background-color: $highlight-color;
+    fill: $background-light;
+  }
 }
 
 .social-link-icon {
@@ -360,17 +355,11 @@ body {
   border-radius: 4px;
   fill: $svg-link-color;
 
-  @include transition(border-color, fill)
-
-  // transition-property: border-color, fill;
-  // transition-duration: $trans-dur;
-  // transition-timing-function: $trans-func;
-}
-
-.client-link:hover,
-.client-link:focus {
-  border-color: $highlight-color;
-  fill: $highlight-color;
+  @include transition(border-color, fill);
+  &:hover, &:focus {
+    border-color: $highlight-color;
+    fill: $highlight-color;
+  }
 }
 
 .client-icon {
@@ -410,7 +399,6 @@ body {
 
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   padding-left: 24px;
   padding-right: 24px;
 
@@ -421,24 +409,18 @@ body {
   background-color: rgba(33, 150, 243, 0.9);
 
   @include transition(transform);
-  // transition: transform $trans-dur $trans-func;
-}
-
-.portfolio-link:hover .portfolio-overlay-text,
-.portfolio-link:focus .portfolio-overlay-text {
-  transform: translateY(0);
+  .portfolio-link:hover &, .portfolio-link:focus & {
+    transform: translateY(0);
+  }
 }
 
 .portfolio-link {
   display: block;
   @include transition(box-shadow);
-  // transition: box-shadow $trans-dur $trans-func;
-}
-
-.portfolio-link:hover,
-.portfolio-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+  &:hover, &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
 }
 
 .portfolio-element {
@@ -549,17 +531,14 @@ body {
 
   fill: $background-light;
   @include transition(fill);
-  // transition: fill $trans-dur $trans-func;
+  .subscribe-button:hover &, .subscribe-button:focus & {
+    fill: $main-color;
+  }
 }
 
 .subscribe-button {
   padding-left: 29px;
   padding-right: 28px;
-}
-
-.subscribe-button:hover .subscribe-submit-icon,
-.subscribe-button:focus .subscribe-submit-icon {
-  fill: $main-color;
 }
 
 .modal-overlay {
@@ -572,7 +551,6 @@ body {
 
   opacity: 1;
   @include transition(opacity);
-  // transition: opacity $trans-dur $trans-func;
 }
 
 .is-hidden {
@@ -596,11 +574,9 @@ body {
   border-radius: 4px;
 
   @include transition(transform);
-  //transition: transform $trans-dur $trans-func;
-}
-
-.is-hidden .modal-window {
-  transform: translate(-50%, -50%) scale(0.5);
+  .is-hidden & {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
 }
 
 .close-button {
@@ -647,20 +623,15 @@ body {
 }
 
 .modal-text-box {
-  /* display: block; */
   width: 100%;
   height: 40px;
   padding-left: 42px;
-  /* box-shadow: none; */
-  /* outline: none; */
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
   @include transition(border-color);
-  //transition: border-color $trans-dur $trans-func;
 }
 
-/* .modal-text-box:hover, */
 .modal-text-box:focus,
 .textarea-comment:focus {
   outline: none;
@@ -678,12 +649,9 @@ body {
   fill:$main-color;
 
   @include transition(fill);
-  //transition: fill $trans-dur $trans-func;
-}
-
-/* .modal-text-box:hover + .modal-text-box-icon,  */
-.modal-text-box:focus + .modal-text-box-icon {
-  fill: $highlight-color;
+  .modal-text-box:focus + & {
+    fill: $highlight-color;
+  }
 }
 
 .textarea-comment {
@@ -697,7 +665,6 @@ body {
   border-radius: 4px;
 
   @include transition(border-color);
-  //transition: border-color $trans-dur $trans-func;
 }
 
 .textarea-comment::placeholder {
@@ -719,7 +686,6 @@ body {
   height: 15px;
   padding: 2px 0.5px;
   margin-right: 7px;
-  /* vertical-align: middle; */
   fill: $background-light;
   border: 2px solid $main-color;
   border-radius: 2px;
