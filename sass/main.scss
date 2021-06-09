@@ -46,7 +46,6 @@ body {
 }
 
 .page-header {
-  /* position: relative; */
   background-color: $background-light;
   height: 80px;
   border: 1px #ececec;
@@ -63,10 +62,9 @@ body {
 
 .navigation-list {
   margin-left: 93px;
-}
-
-.navigation-list > li + li {
-  margin-left: 50px;
+  & > li + li {
+    margin-left: 50px;
+  }
 }
 
 .navigation-link {
@@ -79,17 +77,16 @@ body {
   position: relative;
   color: $highlight-color;
   display: block;
-}
-
-.current::after {
-  position: absolute;
-  bottom: -32px;
-  display: block;
-  content: "";
-  background-color: $highlight-color;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
+  &::after {
+    position: absolute;
+    bottom: -32px;
+    display: block;
+    content: "";
+    background-color: $highlight-color;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+  }
 }
 
 .header-contact-icon {
@@ -103,10 +100,10 @@ body {
   letter-spacing: 0.02em;
   color: $secondary-color;
   margin-left: auto;
-}
 
-.header-contact-link + .header-contact-link {
-  margin-left: 30px;
+  & + & {
+    margin-left: 30px;
+  }
 }
 
 /* Класс highlight работает только, если описан ниже классов, к которым применяется. 
@@ -115,20 +112,13 @@ body {
   color: $highlight-color;
 }
 
-.navigation-link:hover,
-.navigation-link:focus,
-.header-contact-link:hover,
-.header-contact-link:focus,
-.footer-contact-link:hover,
-.footer-contact-link:focus {
-  color: $highlight-color;
-}
-
 .navigation-link,
 .header-contact-link,
 .footer-contact-link {
-  // transition: color $trans-dur $trans-func;
   @include transition(color);
+  &:hover, &:focus {
+    color: $highlight-color;
+  }
 }
 
 .hero {
@@ -181,18 +171,12 @@ body {
   letter-spacing: 0.06em;
 
   @include transition(color, background-color);
-  // transition-property: color, background-color;
-  // transition-duration: $trans-dur;
-  // transition-timing-function: $trans-func;
 }
 
 .filter-button {
   line-height: 1.625em;
   padding: 6px 22px;
   @include transition(color, background-color, box-shadow);
-  // transition-property: color, background-color, box-shadow;
-  // transition-duration: $trans-dur;
-  // transition-timing-function: $trans-func;
 }
 
 .order-button,
@@ -225,8 +209,6 @@ body {
 }
 
 .quality-icon {
-  /* padding-top: 25px;
-  padding-bottom: 25px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -312,15 +294,13 @@ body {
   color: $secondary-color;
   margin-top: 10px;
   margin-bottom: 16px;
-  /* padding: 0 0 30px; */
 }
 
 .social-link-list {
   justify-content: center;
-}
-
-.social-link-list > li + li {
-  margin-left: 10px;
+  & > li + li {
+    margin-left: 10px;
+  }
 }
 
 .social-link {
@@ -377,10 +357,9 @@ body {
 .filter {
   display: block;
   margin: 0;
-}
-
-.filter + .filter {
-  margin-left: 8px;
+  & + & {
+    margin-left: 8px;
+  }
 }
 
 .portfolio-overlay {
@@ -395,8 +374,6 @@ body {
   right: 0;
   height: 100%;
 
-  transform: translateY(100%);
-
   display: flex;
   align-items: center;
   padding-left: 24px;
@@ -408,8 +385,11 @@ body {
   color: $background-light;
   background-color: rgba(33, 150, 243, 0.9);
 
+  transform: translateY(100%);
+
   @include transition(transform);
-  .portfolio-link:hover &, .portfolio-link:focus & {
+  .portfolio-link:hover &,
+  .portfolio-link:focus & {
     transform: translateY(0);
   }
 }
@@ -425,14 +405,12 @@ body {
 
 .portfolio-element {
   margin-top: 30px;
-}
-
-.portfolio-element:not(:nth-child(3n)) {
-  margin-right: 30px;
-}
-
-.portfolio-element > a {
-  color: unset;
+  &:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+  & > a {
+    color: unset;
+  }
 }
 
 .portfolio-element-text {
@@ -516,10 +494,10 @@ body {
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-}
 
-.subscribe-input::placeholder {
-  color: rgba(255, 255, 255, 0.6);;
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
 
 .subscribe-submit-icon {
@@ -531,7 +509,8 @@ body {
 
   fill: $background-light;
   @include transition(fill);
-  .subscribe-button:hover &, .subscribe-button:focus & {
+  .subscribe-button:hover &,
+  .subscribe-button:focus & {
     fill: $main-color;
   }
 }
@@ -593,11 +572,11 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   box-shadow: none;
-}
 
-.close-button:hover,
-.close-button:focus {
-  fill: $highlight-color;
+  @include transition(fill);
+  &:hover, &:focus {
+    fill: $highlight-color;
+  }
 }
 
 .modal-title {
@@ -613,6 +592,9 @@ body {
 .form-label {
   display: block;
   margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
   color: $secondary-color;
 }
 
@@ -630,12 +612,10 @@ body {
   border-radius: 4px;
 
   @include transition(border-color);
-}
-
-.modal-text-box:focus,
-.textarea-comment:focus {
-  outline: none;
-  border-color: $highlight-color;
+  &:focus {
+    outline: none;
+    border-color: $highlight-color;
+  }
 }
 
 .modal-text-box-icon {
@@ -664,11 +644,15 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  @include transition(border-color);
-}
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
 
-.textarea-comment::placeholder {
-  color: rgba(117, 117, 117, 0.5);
+  @include transition(border-color);
+  &:focus {
+    outline: none;
+    border-color: $highlight-color;
+  }
 }
 
 .agreement-wrapper {
@@ -677,7 +661,7 @@ body {
 
   line-height: 1.714;
   color: $secondary-color;
-  text-align: center;
+  margin-left: 13px;
 }
 
 .custom-checkbox {
@@ -689,14 +673,14 @@ body {
   fill: $background-light;
   border: 2px solid $main-color;
   border-radius: 2px;
-}
 
-.checkbox:focus + .custom-checkbox {
-  border-color: $highlight-color;
-}
-
-.checkbox:checked + .custom-checkbox {
-  background-color: $highlight-color;
+  .checkbox:focus + &,
+  .checkbox:checked + & {
+    border-color: $highlight-color;
+  }
+  .checkbox:checked + & {
+    background-color: $highlight-color;
+  }
 }
 
 .agreement-link {
