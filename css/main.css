@@ -17,13 +17,6 @@ a {
   text-decoration: none;
 }
 
-.list {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -66,6 +59,13 @@ body {
 
 .space {
   justify-content: space-between;
+}
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .std-section {
@@ -708,8 +708,4 @@ body {
   padding-left: 56px;
   padding-right: 56px;
 }
-
-/* ======= OUR TEAM ====== */
-/* ====== CLIENTS ====== */
-/* ====== PORTFOLIO ====== */
 /*# sourceMappingURL=main.css.map */
