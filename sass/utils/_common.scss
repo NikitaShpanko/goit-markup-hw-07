@@ -1,0 +1,45 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.172;
+  letter-spacing: 0.03em;
+  color: $main-color;
+  background: #e5e5e5;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.wrappable {
+  flex-wrap: wrap;
+}
+
+.space {
+  justify-content: space-between;
+}
+
+.std-section {
+  background-color: $background-light;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.std-title {
+  font-size: 36px;
+  line-height: 1.167;
+  text-align: center;
+  margin: 0 0 50px 0;
+}

@@ -1,0 +1,52 @@
+.page-header {
+  background-color: $background-light;
+  height: 80px;
+  border: 1px #ececec;
+  border-style: none none solid none;
+}
+
+.navigation-list {
+  margin-left: 93px;
+  & > li + li {
+    margin-left: 50px;
+  }
+}
+
+.navigation-link {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: $main-color;
+}
+
+.current {
+  position: relative;
+  color: $highlight-color;
+  display: block;
+  &::after {
+    position: absolute;
+    bottom: -32px;
+    display: block;
+    content: "";
+    background-color: $highlight-color;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+  }
+}
+
+.header-contact-icon {
+  display: block;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.header-contact-link {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: $secondary-color;
+  margin-left: auto;
+
+  & + & {
+    margin-left: 30px;
+  }
+}

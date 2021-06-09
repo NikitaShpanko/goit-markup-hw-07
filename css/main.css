@@ -1,4 +1,3 @@
-@charset "UTF-8";
 h1,
 h2,
 h3,
@@ -16,6 +15,13 @@ img {
 
 a {
   text-decoration: none;
+}
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .visually-hidden {
@@ -62,80 +68,17 @@ body {
   justify-content: space-between;
 }
 
-.list {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.page-header {
+.std-section {
   background-color: #ffffff;
-  height: 80px;
-  border: 1px #ececec;
-  border-style: none none solid none;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
-.company-logo {
-  display: block;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  color: #212121;
-}
-
-.navigation-list {
-  margin-left: 93px;
-}
-
-.navigation-list > li + li {
-  margin-left: 50px;
-}
-
-.navigation-link {
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: #212121;
-}
-
-.current {
-  position: relative;
-  color: #2196f3;
-  display: block;
-}
-
-.current::after {
-  position: absolute;
-  bottom: -32px;
-  display: block;
-  content: "";
-  background-color: #2196f3;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-}
-
-.header-contact-icon {
-  display: block;
-  margin-right: 10px;
-  fill: currentColor;
-}
-
-.header-contact-link {
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: #757575;
-  margin-left: auto;
-}
-
-.header-contact-link + .header-contact-link {
-  margin-left: 30px;
-}
-
-/* Класс highlight работает только, если описан ниже классов, к которым применяется. 
-   Как бы его хитрее решить-то? */
-.highlight {
-  color: #2196f3;
+.std-title {
+  font-size: 36px;
+  line-height: 1.167;
+  text-align: center;
+  margin: 0 0 50px 0;
 }
 
 .navigation-link,
@@ -150,34 +93,6 @@ body {
 .footer-contact-link:hover,
 .footer-contact-link:focus {
   color: #2196f3;
-}
-
-.hero {
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background.jpg");
-  background-position-x: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #c4c4c4;
-  /*$background-dark; */
-  text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.motto {
-  font-size: 44px;
-  font-weight: 900;
-  color: #ffffff;
-  line-height: 1.36em;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
-  max-width: 696px;
 }
 
 .order-button,
@@ -229,6 +144,130 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.company-logo {
+  display: block;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  color: #212121;
+}
+
+.highlight {
+  color: #2196f3;
+}
+
+.page-header {
+  background-color: #ffffff;
+  height: 80px;
+  border: 1px #ececec;
+  border-style: none none solid none;
+}
+
+.navigation-list {
+  margin-left: 93px;
+}
+
+.navigation-list > li + li {
+  margin-left: 50px;
+}
+
+.navigation-link {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #212121;
+}
+
+.current {
+  position: relative;
+  color: #2196f3;
+  display: block;
+}
+
+.current::after {
+  position: absolute;
+  bottom: -32px;
+  display: block;
+  content: "";
+  background-color: #2196f3;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.header-contact-icon {
+  display: block;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.header-contact-link {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #757575;
+  margin-left: auto;
+}
+
+.header-contact-link + .header-contact-link {
+  margin-left: 30px;
+}
+
+.social-link-list {
+  justify-content: center;
+}
+
+.social-link-list > li + li {
+  margin-left: 10px;
+}
+
+.social-link {
+  display: block;
+  padding: 12px;
+  border-radius: 50%;
+  fill: #afb1b8;
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover, .social-link:focus {
+  background-color: #2196f3;
+  fill: #ffffff;
+}
+
+.social-link-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.hero {
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background.jpg");
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #c4c4c4;
+  /*$background-dark; */
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.motto {
+  font-size: 44px;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.36em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  max-width: 696px;
+}
+
 .qualities {
   background-color: #ffffff;
   padding-top: 94px;
@@ -262,19 +301,6 @@ body {
   line-height: 1.714em;
 }
 
-.std-section {
-  background-color: #ffffff;
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.std-title {
-  font-size: 36px;
-  line-height: 1.167;
-  text-align: center;
-  margin: 0 0 50px 0;
-}
-
 .what-we-do {
   position: relative;
 }
@@ -297,7 +323,6 @@ body {
   text-transform: uppercase;
 }
 
-/* ======= OUR TEAM ====== */
 .team {
   background-color: #f5f4fa;
   padding-top: 94px;
@@ -324,36 +349,6 @@ body {
   margin-bottom: 16px;
 }
 
-.social-link-list {
-  justify-content: center;
-}
-
-.social-link-list > li + li {
-  margin-left: 10px;
-}
-
-.social-link {
-  display: block;
-  padding: 12px;
-  border-radius: 50%;
-  fill: #afb1b8;
-  transition-property: background-color, fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social-link:hover, .social-link:focus {
-  background-color: #2196f3;
-  fill: #ffffff;
-}
-
-.social-link-icon {
-  display: block;
-  width: 20px;
-  height: 20px;
-}
-
-/* ====== CLIENTS ====== */
 .client-link {
   display: flex;
   align-items: center;
@@ -378,7 +373,6 @@ body {
   height: 60px;
 }
 
-/* ====== PORTFOLIO ====== */
 .filter-list {
   justify-content: center;
   margin-bottom: 20px;
@@ -714,4 +708,8 @@ body {
   padding-left: 56px;
   padding-right: 56px;
 }
+
+/* ======= OUR TEAM ====== */
+/* ====== CLIENTS ====== */
+/* ====== PORTFOLIO ====== */
 /*# sourceMappingURL=main.css.map */

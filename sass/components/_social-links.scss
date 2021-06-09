@@ -1,0 +1,25 @@
+.social-link-list {
+  justify-content: center;
+  & > li + li {
+    margin-left: 10px;
+  }
+}
+
+.social-link {
+  display: block;
+  padding: 12px;
+  border-radius: 50%;
+  fill: $svg-link-color;
+
+  @include transition(background-color, fill);
+  &:hover, &:focus {
+    background-color: $highlight-color;
+    fill: $background-light;
+  }
+}
+
+.social-link-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+}

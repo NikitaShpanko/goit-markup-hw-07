@@ -1,0 +1,8 @@
+.navigation-link,
+.header-contact-link,
+.footer-contact-link {
+  @include transition(color);
+  &:hover, &:focus {
+    color: $highlight-color;
+  }
+}

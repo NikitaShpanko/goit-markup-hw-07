@@ -1,0 +1,32 @@
+.qualities {
+  background-color: $background-light;
+  padding-top: 94px;
+}
+
+.quality {
+  width: 270px;
+}
+
+.quality-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: $background-medium;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.quality-name {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.167;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.quality-explanation {
+  color: $secondary-color;
+  line-height: 1.714em;
+}
