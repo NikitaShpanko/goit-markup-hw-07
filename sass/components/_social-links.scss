@@ -1,11 +1,12 @@
-.social-link-list {
+.social-links {
   justify-content: center;
-  & > li + li {
-    margin-left: 10px;
-  }
 }
 
-.social-link {
+.social-links__item:not(:first-child) {
+  margin-left: 10px;
+}
+
+.social-links__link {
   display: block;
   padding: 12px;
   border-radius: 50%;
@@ -18,8 +19,13 @@
   }
 }
 
-.social-link-icon {
+.social-links__icon {
   display: block;
   width: 20px;
   height: 20px;
+}
+
+.social-links__link_dark {
+  background: rgba(255, 255, 255, 0.1);
+  fill: $background-light;
 }

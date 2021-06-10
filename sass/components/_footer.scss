@@ -1,29 +1,33 @@
-.page-footer {
+.footer {
   background-color: $background-dark;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.page-footer .company-logo {
+.footer__container {
+  @extend %flex;
+}
+
+.footer__logo {
   color: $background-light;
   margin-bottom: 20px;
 }
 
-.footer-address {
+.footer__address {
   font-style: normal;
 }
 
-.footer-contact {
+.footer__contact {
   color: $background-light;
   margin-top: 9px;
   line-height: 1.714;
 }
 
-.footer-contact-link {
+.footer__contact-link {
   color: $secondary-color;
 }
 
-.footer-header {
+.footer__header {
   color: $background-light;
   font-size: 14px;
   font-weight: 700;
@@ -33,17 +37,16 @@
   margin-bottom: 20px;
 }
 
-.footer-mid {
+.footer__social {
   margin-left: 70px;
 }
 
-.link-in-footer {
-  background: rgba(255, 255, 255, 0.1);
-  fill: $background-light;
+.footer__subscription {
+  margin-left: 93px;
 }
 
-.footer-right {
-  margin-left: 93px;
+.subscribe {
+  @extend %flex;
 }
 
 .subscribe-input {
@@ -66,7 +69,7 @@
   }
 }
 
-.subscribe-submit-icon {
+.subscribe__icon {
   width: 24px;
   height: 24px;
   display: inline-block;
@@ -75,13 +78,13 @@
 
   fill: $background-light;
   @include transition(fill);
-  .subscribe-button:hover &,
-  .subscribe-button:focus & {
+  .subscribe__button:hover &,
+  .subscribe__button:focus & {
     fill: $main-color;
   }
 }
 
-.subscribe-button {
+.subscribe__button {
   padding-left: 29px;
   padding-right: 28px;
 }

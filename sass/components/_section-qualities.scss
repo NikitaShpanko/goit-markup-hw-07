@@ -1,13 +1,8 @@
-.qualities {
-  background-color: $background-light;
-  padding-top: 94px;
-}
-
 .quality {
   width: 270px;
 }
 
-.quality-icon {
+.quality__icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,7 +13,7 @@
   text-align: center;
 }
 
-.quality-name {
+.quality__name {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.167;
@@ -26,7 +21,7 @@
   margin-bottom: 10px;
 }
 
-.quality-explanation {
+.quality__explanation {
   color: $secondary-color;
   line-height: 1.714em;
 }

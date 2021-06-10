@@ -1,9 +1,3 @@
-.team {
-  background-color: $background-medium;
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .team-member {
   background-color: $background-light;
   padding-bottom: 30px;
@@ -13,12 +7,12 @@
   text-align: center;
 }
 
-.team-member-name {
+.team-member__name {
   font-size: 16px;
   margin-top: 30px;
 }
 
-.team-member-job {
+.team-member__job {
   font-size: 16px;
   color: $secondary-color;
   margin-top: 10px;
